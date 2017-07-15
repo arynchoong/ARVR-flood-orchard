@@ -8,25 +8,31 @@
   </head>
 
   <body>
+
     <a-assets>
-      <a-asset-item id="a380-obj" src="./ducky.obj"></a-asset-item>
+      <a-asset-item id="ducky" src="./ducky.obj"></a-asset-item>
       <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/virtualcity/VC.gltf" scale="0.1 0.1 0.1"></a-asset-item>
     </a-assets>
 
     <a-scene rain>
       <!-- <a-gltf-model src="#cityModel"></a-gltf-model> -->
+      <a-entity>
+        <a-cylinder color="darkgrey" height="50" radius="1.5" position="0 0 -10"  roughness="0.5" rotation="0 45 90" theta-start="0" theta-length="-180" side="double" open-ended="true" segments-radial="3"></a-cylinder>
+        <a-box rotation="0 45 0" color="#b9b4ab" depth="2.5" width="50" height="1.45" position="-1.96 -0.71 -11.96"></a-box>
+        <a-box rotation="0 45 0" color="#b9b4ab" depth="2.5" width="50" height="1.45" position="2 -0.71 -8.15"></a-box>
+      </a-entity>
 
-      <a-entity obj-model="obj: #a380-obj;"
+      <a-entity obj-model="obj: #ducky;"
         src="#ducky-obj"
-        position="0 -120 0"
+        position="-2 0.15 -7"
         rotation="-210 -120 180"
-        scale="1 1 1"
+        scale="0.001 0.001 0.001"
         material="color: orange"
         >
       </a-entity>
-      <a-entity id="ocean" ocean="density: 30; width: 200; depth: 30; speed: 4"
+      <a-entity id="ocean" ocean="density: 5; width: 1; depth: 30; speed: 2"
                 material="color: #064273; opacity: 0.75; metalness: 0; roughness: 1"
-                rotation="-90 0 0" position="0 1 0">
+                rotation="-90 135 0" position="-9 0 0">
       </a-entity>
     </a-scene>
 
