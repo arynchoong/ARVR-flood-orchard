@@ -15,7 +15,7 @@
       <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/virtualcity/VC.gltf" scale="0.1 0.1 0.1"></a-asset-item>
     </a-assets>
 
-    <a-scene rain>
+    <a-scene rain inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
       <!-- <a-gltf-model src="#cityModel"></a-gltf-model> -->
 
       <a-sky color="darkgray"></a-sky>
@@ -42,6 +42,14 @@
       <a-entity id="ocean" ocean="density: 5; width: 2; depth: 50; speed: 2"
                 material="color: #064273; opacity: 0.75; metalness: 0; roughness: 1"
                 rotation="-90 135 0" position="-1.75 0 -7.63">
+      </a-entity>
+      <!-- ball - test -->
+      <a-entity id="ball">
+        <a-sphere position ="-30 -1.25 0"
+                radius: 60
+                scale="0.1 0.1 0.1"
+                rotation="-90 0 0"
+                color= "green"></a-entity>
       </a-entity>
     </a-scene>
 
