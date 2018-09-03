@@ -13,6 +13,7 @@
       <a-asset-item id="ducky" src="./ducky.obj"></a-asset-item>
       <a-asset-item id="tiles" src="./images/tiles.jpg"></a-asset-item>
       <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/virtualcity/VC.gltf" scale="0.1 0.1 0.1"></a-asset-item>
+      <a-asset-item id="building" src="./images/build.obj"></a-asset-item>
     </a-assets>
 
     <a-scene rain>
@@ -42,6 +43,14 @@
       <a-entity id="ocean" ocean="density: 5; width: 2; depth: 50; speed: 2"
                 material="color: #064273; opacity: 0.75; metalness: 0; roughness: 1"
                 rotation="-90 135 0" position="-1.75 0 -7.63">
+      </a-entity>
+      <a-entity obj-model="obj: #building;"
+        src="#building"
+        position="3 0.15 -7"
+        rotation="-180 -120 180"
+        scale="0.015 0.015 0.015"
+        material="color: gray"
+        >
       </a-entity>
     </a-scene>
 
