@@ -8,13 +8,15 @@
   </head>
 
   <body>
-
+    
     <a-assets>
       <a-asset-item id="ducky" src="./ducky.obj"></a-asset-item>
       <a-asset-item id="tiles" src="./images/tiles.jpg"></a-asset-item>
+      <a-asset-item id="tree" src="./images/tree.obj"></a-asset-item>
       <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/virtualcity/VC.gltf" scale="0.1 0.1 0.1"></a-asset-item>
     </a-assets>
-
+    
+    
     <a-scene rain>
       <!-- <a-gltf-model src="#cityModel"></a-gltf-model> -->
 
@@ -43,7 +45,21 @@
                 material="color: #064273; opacity: 0.75; metalness: 0; roughness: 1"
                 rotation="-90 135 0" position="-1.75 0 -7.63">
       </a-entity>
+      <a-entity obj-model="obj: #tree;"
+        src="#tree-obj"
+        scale="0.001 0.001 0.001"
+        material="color: orange"
+        >
+      </a-entity> 
+      <a-entity obj-model="obj: #tree;"
+        src="#tree-obj"
+        material="color: green"
+      >
+      </a-entity>   
     </a-scene>
+    
+  </a-entity>
+
 
   </body>
 </html>
