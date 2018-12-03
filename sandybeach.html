@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+  </head>
+
+  <body>
+		<a-scene rain>		
+			
+			<a-assets>
+				<a-asset-item id="ducky" src="./images/ducky.obj"></a-asset-item>
+				<a-asset-item id="car" src="./images/car.obj"></a-asset-item>
+				<a-asset-item id="car-mtl" src="./images/car.mtl"></a-asset-item>
+				<a-asset-item id="tree" src="./images/coconut-tree.obj"></a-asset-item>
+				<a-asset-item id="tree-mtl" src="./images/coconut-tree.mtl"></a-asset-item>
+				<a-asset-item id="a380" src="./images/a380/a380.obj"></a-asset-item>
+				<a-asset-item id="a380-mtl" src="./images/a380/a380.mtl"></a-asset-item>
+				<a-asset-item id="tiles" src="./images/tiles.jpg"></a-asset-item>
+				<!-- <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/virtualcity/VC.gltf" scale="0.1 0.1 0.1"></a-asset-item> -->
+			</a-assets>
+		  
+			<a-sound src="src: url(./music/music.mp3)" autoplay="true" position="0 2 5"></a-sound>
+		  
+			<a-sky color="skyblue"></a-sky>
+			
+			
+			<a-plane position="4 -1 3" rotation="-90 0 0" width="100" height="100" color="#AD9253"></a-plane>
+		  
+			<a-entity>
+				<a-cylinder color="darkgrey" height="50" radius="1.5" position="0 0 -10"  roughness="0.5" rotation="0 45 90" theta-start="0" theta-length="-180" side="double" open-ended="true" segments-radial="3"></a-cylinder>
+				<a-box src="#tiles" repeat="10 10" rotation="0 45 0" color="#b9b4ab" depth="2.5" width="50" height="-0.45" position="-1.93 0 -12"></a-box>
+				<a-box src="#tiles" repeat="10 10" rotation="0 45 0" color="#b9b4ab" depth="2.5" width="50" height="-0.45" position="1.5 0 -7.63"></a-box>
+			</a-entity>
+
+<!-- sound="src: url(music.mp3); autoplay: true" -->
+
+			<a-entity obj-model="obj: #ducky;" 
+				src="#ducky-obj"				
+				position="-2 0.15 -7"
+				rotation="-210 -120 180"
+				scale="0.001 0.001 0.001"
+				material="color: orange"
+				>
+				<a-animation attribute="position"
+				  to="-18 0 9"
+				  direction="alternate"
+				  dur="10000"
+				  repeat="indefinite">
+				</a-animation>
+			</a-entity>
+		  
+		  <a-entity obj-model="obj: #tree; mtl: #tree-mtl"
+			src="#tree-obj"
+			position="-2 0.15 -7"
+			rotation="-210 -120 180"
+			scale="0.01 0.01 0.01"
+			>
+		  </a-entity>
+		  
+		  <a-entity obj-model="obj: #tree; mtl: #tree-mtl"
+			src="#tree-obj"
+			position="-5 0.15 -7"
+			rotation="-210 -120 180"
+			scale="0.01 0.01 0.01"
+			>
+		  </a-entity>
+		  
+		  <a-entity obj-model="obj: #car; mtl: #car-mtl"
+			src="#car-obj"
+			position="-4 0.15 -20"
+			rotation="0 0 0"
+			scale="0.8 0.8 0.8"
+			>
+		  </a-entity>
+		  
+		  <a-entity obj-model="obj: #a380; mtl: #a380-mtl"
+			src="#a380-obj"
+			position="-3 5 -5"
+			rotation="0 0 0"
+			scale="0.05 0.05 0.05"
+			>
+		  </a-entity>
+		  
+		  <a-entity id="ocean" ocean="density: 5; width: 2; depth: 50; speed: 2" 
+					material="color: #064273; opacity: 0.75; metalness: 0; roughness: 1"
+					rotation="-90 135 0" position="-1.75 0 -7.63">
+		  </a-entity>
+		  
+		</a-scene>
+
+	</body>
+  </html>
+  
+  
+  
