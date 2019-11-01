@@ -2,30 +2,49 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <title>Rubber Duckie's Tour of Orchard</title>
+    <meta name="description" content="flood orchard">
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
-    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
   </head>
-
   <body>
-
-    <a-assets>
-      <a-asset-item id="ducky" src="./ducky.obj"></a-asset-item>
-      <a-asset-item id="tiles" src="./images/tiles.jpg"></a-asset-item>
-      <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/virtualcity/VC.gltf" scale="0.1 0.1 0.1"></a-asset-item>
-    </a-assets>
-
-    <a-scene rain>
-      <!-- <a-gltf-model src="#cityModel"></a-gltf-model> -->
-
+    <a-scene rain id="longkang">
+      <a-assets>
+        <a-asset-item id="ducky" 
+          src="ducky.obj">
+        </a-asset-item>
+      </a-assets>
+      
       <a-sky color="darkgray"></a-sky>
+      
+      <!--longkang-->
       <a-entity>
-        <a-cylinder color="darkgrey" height="50" radius="1.5" position="0 0 -10"  roughness="0.5" rotation="0 45 90" theta-start="0" theta-length="-180" side="double" open-ended="true" segments-radial="3"></a-cylinder>
-        
-        <a-box src="#tiles" repeat="10 10" rotation="0 45 0" color="#b9b4ab" depth="2.5" width="50" height="-0.45" position="-1.93 0 -12"></a-box>
-        <a-box src="#tiles" repeat="10 10" rotation="0 45 0" color="#b9b4ab" depth="2.5" width="50" height="-0.45" position="1.5 0 -7.63"></a-box>
+        <a-cylinder 
+          color="slategray" height="50" radius="0.5" 
+          position="0 0 -10" roughness="0.5" rotation="0 45 90" 
+          theta-start="0" theta-length="-180" side="double" 
+          open-ended="true" segments-radial="3"
+        ></a-cylinder>
+        <a-box 
+          repeat="10 10" rotation="0 45 0" color="#222" 
+          depth="2.5" width="50" height="1.45" 
+          position="-1.29 -0.71 -11.20"
+        ></a-box>
+        <a-box 
+          repeat="10 10" rotation="0 45 0" color="#222" 
+          depth="2.5" width="50" height="1.45" 
+          position="1.25 -0.71 -8.63"
+        ></a-box>
       </a-entity>
-
+      <!--Water in longkang-->
+      <a-entity 
+        id="ocean" ocean="density: 5; width: 2; depth: 50; speed: 2"
+          material="color: #064273; opacity: 0.75; metalness: 0; roughness: 1"
+          rotation="-90 135 0" position="-1.75 -0.1 -7.63"
+      ></a-entity> 
+      
+      <!--Rubber duckie-->
       <a-entity obj-model="obj: #ducky;"
         src="#ducky-obj"
         position="-2 0.15 -7"
@@ -40,11 +59,7 @@
           repeat="indefinite">
         </a-animation>
       </a-entity>
-      <a-entity id="ocean" ocean="density: 5; width: 2; depth: 50; speed: 2"
-                material="color: #064273; opacity: 0.75; metalness: 0; roughness: 1"
-                rotation="-90 135 0" position="-1.75 0 -7.63">
-      </a-entity>
+      
     </a-scene>
-
   </body>
 </html>
