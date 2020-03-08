@@ -6,3 +6,5 @@ The rubber duckie is now enjoying the only chance to explore orchard road.
 [How to contribute](docs/contribute.md)
 
 [See the duckie](https://arynchoong.github.io/ARVR-flood-orchard/)
+
+[See MRT Exit A](https://arynchoong.github.io/ARVR-flood-orchard/mrt-exit-a.html)

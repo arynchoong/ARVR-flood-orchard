@@ -6,16 +6,20 @@
     <a-scene>
       <a-sky color="#87ceeb"></a-sky>
       
-      <!-- Glass box -->
-      <a-box rotation="0 45 0" color="#b9b4ab" depth="3" width="7.5" height="3" position="2.5 1.5 -7" material="side: double; color: #C0C0C0; transparent: true; opacity: 0.2"></a-box>
+      <!-- Glass : front -->
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="3" width="0.02" height="3" position="-0.161 1.5 -4.361" material="side: double; color: #C0C0C0; transparent: true; opacity: 0.2"></a-box>
+      <!-- Glasses : right -->
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="4.5" height="3" position="2.491 1.5 -4.891" material="side: double; color: #C0C0C0; transparent: true; opacity: 0.2"></a-box>
+      <!-- Glasses : left -->
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="4.5" height="3" position="0.369 1.5 -7.012" material="side: double; color: #C0C0C0; transparent: true; opacity: 0.2"></a-box>
       
       <!-- Corner frames : front right -->
       <a-box rotation="0 45 0" color="#b9b4ab" depth="0.05" width="0.02" height="3" position="0.9 1.5 -3.3" material="side: double; color: #A9A9A9;"></a-box>
-      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.05" width="0.02" height="3" position="-7.585 1.5 5.185" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.05" width="0.02" height="3" position="-1.221 1.5 -5.421" material="side: double; color: #A9A9A9;"></a-box>
       
       <!-- Front frames -->
-      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.05" width="0.02" height="3" position="-1.928 1.5 -0.472" material="side: double; color: #A9A9A9;"></a-box>
-      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.05" width="0.02" height="3" position="-4.757 1.5 2.357" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="0.193 1.5 -4.007" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="-0.514 1.5 -4.714" material="side: double; color: #A9A9A9;"></a-box>
 
       <!-- Right frames -->
       <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="1.254 1.5 -3.654" material="side: double; color: #A9A9A9;"></a-box>
@@ -27,11 +31,31 @@
       <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="3.375 1.5 -5.775" material="side: double; color: #A9A9A9;"></a-box>
       <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="3.728 1.5 -6.128" material="side: double; color: #A9A9A9;"></a-box>
       <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="4.082 1.5 -6.482" material="side: double; color: #A9A9A9;"></a-box>
-      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="4.436 1.5 -6.836" material="side: double; color: #A9A9A9;"></a-box>
-      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="4.789 1.5 -7.189" material="side: double; color: #A9A9A9;"></a-box>
-      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="5.143 1.5 -7.543" material="side: double; color: #A9A9A9;"></a-box>
-      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="5.496 1.5 -7.896" material="side: double; color: #A9A9A9;"></a-box>
-      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="5.85 1.5 -8.25" material="side: double; color: #A9A9A9;"></a-box>
+      <!-- partial glass -->
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="1" position="4.436 0.5 -6.836" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="4.436 2.75 -6.836" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="4.789 2.75 -7.189" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="5.143 2.75 -7.543" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="5.496 2.75 -7.896" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="5.85 2.75 -8.25" material="side: double; color: #A9A9A9;"></a-box>
+      
+      <!-- left frames -->
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="-0.868 1.5 -5.775" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="-0.514 1.5 -6.128" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="-0.161 1.5 -6.482" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="0.193 1.5 -6.836" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="0.546 1.5 -7.189" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="0.900 1.5 -7.543" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="1.254 1.5 -7.896" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="1.607 1.5 -8.250" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="3" position="1.961 1.5 -8.603" material="side: double; color: #A9A9A9;"></a-box>
+      <!-- partial glass -->
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="1" position="2.314 0.5 -8.957" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="2.314 2.75 -8.957" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="2.668 2.75 -9.310" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="3.021 2.75 -9.664" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="3.375 2.75 -10.018" material="side: double; color: #A9A9A9;"></a-box>
+      <a-box rotation="0 45 0" color="#b9b4ab" depth="0.02" width="0.02" height="0.5" position="3.728 2.75 -10.371" material="side: double; color: #A9A9A9;"></a-box>
 
     </a-scene>
   </body>
